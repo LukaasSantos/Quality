@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Glassmorphism Classes */
+.glass-nav {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+}
+
+/* Custom Gradients */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #10b981 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-mesh {
+  background-color: #0f172a;
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(30, 58, 138, 0.3) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, rgba(16, 185, 129, 0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(99, 102, 241, 0.2) 0px, transparent 50%);
+}
+
+.bg-gradient-light-mesh {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 5% 5%, rgba(59, 130, 246, 0.05) 0px, transparent 40%),
+    radial-gradient(at 95% 5%, rgba(16, 185, 129, 0.08) 0px, transparent 40%),
+    radial-gradient(at 50% 90%, rgba(99, 102, 241, 0.05) 0px, transparent 50%);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.05); }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 8s ease-in-out infinite;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.2);
+}
+
+/* Service Detail Modal Animation */
+.modal-overlay {
+  transition: opacity 0.35s ease;
+}
+.modal-content {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
+}
+
+/* Custom checkmark list styles */
+.checkmark-list li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+.checkmark-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.375rem;
+  width: 1rem;
+  height: 0.5rem;
+  border-left: 2px solid #10b981;
+  border-bottom: 2px solid #10b981;
+  transform: rotate(-45deg);
+}
+
+/* Active navigation dot indicator */
+.nav-link {
+  position: relative;
+  color: #475569; /* Slate 600 default (for light bg at top) */
+  transition: color 0.3s ease;
+}
+
+.dark .nav-link {
+  color: #cbd5e1; /* Slate 300 default for dark mode */
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #10b981 !important; /* Brand Emerald */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #10b981;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Scrolled Header Menu Font Color turns White */
+#main-header.glass-nav .nav-link:not(.active) {
+  color: #ffffff !important;
+}
+
+#main-header.glass-nav .nav-link:not(.active):hover {
+  color: #10b981 !important;
+}
+
+/* Active tab style for standard selector */
+.tab-active {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
+  border-color: #10b981;
+  box-shadow: 0 4px 20px -5px rgba(16, 185, 129, 0.3);
+}
+
+/* Timeline element style */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #10b981, #1e3a8a, #3b82f6);
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+}
