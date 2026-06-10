@@ -499,4 +499,10 @@ document.addEventListener('DOMContentLoaded', () => {
       bubble.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
     }
   });
+
+  // --- Dynamic Year ---
+  const currentYearEl = document.getElementById('current-year');
+  if (currentYearEl) {
+    currentYearEl.textContent = new Date().getFullYear();
+  }
 });
