@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /qualityWP/
 
 Sitemap: https://www.qualityconsultoria.com.br/sitemap.xml
