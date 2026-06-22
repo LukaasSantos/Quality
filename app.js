@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const duration = 2000; // 2 seconds
     const stepTime = Math.max(Math.floor(duration / target), 15);
     let current = 0;
-    
+
     const timer = setInterval(() => {
       current += Math.ceil(target / (duration / stepTime));
       if (current >= target) {
@@ -122,10 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Consultoria e Gestão Estruturada",
       description: "Apoiamos sua organização na jornada de excelência de ponta a ponta. Nossa equipe de especialistas cocria estratégias sob medida que otimizam processos operacionais, reduzem desperdícios e implantam sistemas de gestão sólidos prontos para auditorias internacionais.",
       features: [
-        "Preparação completa para certificações (ISO 9001, 14001, 45001, etc.) com 100% de aprovação.",
+        "Preparação completa para certificações (ISO 9001, ISO 14001, FSSC 22000, ISO/IEC 17015, BPF, etc.) com 100% de aprovação.",
         "Mapeamento e otimização de processos de negócios (BPM) eliminando gargalos estruturais.",
         "Assessoria em Gestão de Riscos corporativos e governança de conformidade.",
-        "Consultoria de transição e adequação para a norma automotiva IATF 16949.",
         "Suporte contínuo na estruturação do planejamento estratégico organizacional."
       ],
       color: "text-blue-500 bg-blue-500/10",
@@ -135,10 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Treinamento e Capacitação de Alta Performance",
       description: "Acreditamos que a transformação real ocorre através das pessoas. Nossos programas de capacitação mesclam teoria sólida com dinâmicas altamente interativas e práticas aplicadas ao cotidiano profissional dos seus colaboradores.",
       features: [
-        "Formação oficial de Auditores Internos nas normas ISO 9001, 14001, 45001 e 50001.",
+        "Formação Auditores Internos nas normas ISO 9001, ISO 14001, ISO/IEC 17025, BPF e outras",
         "Workshops focados em ferramentas da qualidade (FMEA, CEP, APQP, PPAP, MASP).",
         "Treinamento de Liderança Lean e Gestão de Mudança organizacional.",
-        "Capacitações in-company 100% customizadas com base na realidade industrial do cliente.",
+        "Capacitações in-company 100% customizadas com base na realidade do cliente",
         "Programas de imersão para analistas e gerentes de melhoria contínua."
       ],
       color: "text-emerald-500 bg-emerald-500/10",
@@ -149,10 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
       description: "Oferecemos uma visão neutra, analítica e de alta precisão sobre o nível de maturidade dos seus sistemas de gestão. Atuamos não apenas para achar 'não-conformidades', mas para revelar pontos valiosos de otimização e inovação.",
       features: [
         "Auditorias internas de primeira parte em Sistemas de Gestão Integrados (SGI).",
-        "Qualificação e auditorias de segunda parte em fornecedores estratégicos globais.",
+        "Terceirização de auditorias.",
         "Auditoria de diagnóstico de prontidão (Gap Analysis) prévia para certificações.",
         "Avaliação de conformidade legal ambiental, de segurança ocupacional e energética.",
-        "Auditorias técnicas focadas em processos industriais e manufatura automotiva."
+        "Auditorias internas de primeira parte em Sistemas de Gestão de Segurança de Alimentos e Qualidade ( FSSC 22000, IFS e outras) e Boas Práticas de Fabricação (ANVISA - BPF)."
       ],
       color: "text-indigo-500 bg-indigo-500/10",
       svg: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>`
@@ -165,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalTitle.textContent = data.title;
     modalDescription.textContent = data.description;
-    
+
     // Set icon & background style
     modalIconContainer.className = `p-4 rounded-2xl ${data.color}`;
     modalIconContainer.innerHTML = data.svg;
@@ -214,6 +213,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (closeModalBtn) {
     closeModalBtn.addEventListener('click', closeModal);
   }
+  const modalCta = document.getElementById('modal-cta');
+  if (modalCta) {
+    modalCta.addEventListener('click', closeModal);
+  }
   if (modal) {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeModal();
@@ -224,9 +227,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabButtons = document.querySelectorAll('.tab-btn');
   const standardsData = {
     iso9001: {
-      title: "ISO 9001:2015",
+      title: "ISO 9001",
       subtitle: "Gestão da Qualidade",
-      description: "A principal referência mundial em gestão empresarial. Ideal para empresas de todos os portes que buscam padronizar processos, otimizar a eficiência operacional, reter clientes e estabelecer uma cultura permanente de melhoria contínua.",
+      description: "A principal referência mundial em gestão da qualidade. Ideal para empresas de todos os portes que buscam padronizar processos, otimizar a eficiência operacional, reter clientes e estabelecer uma cultura permanente de melhoria contínua.",
       points: [
         "Foco total na satisfação e fidelização dos clientes.",
         "Mapeamento detalhado e sistematização de processos cruciais.",
@@ -250,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
       quote: "Qualificação técnica indispensável para ingressar na elite do fornecimento industrial."
     },
     iso14001: {
-      title: "ISO 14001:2015",
+      title: "ISO 14001",
       subtitle: "Gestão Ambiental",
       description: "O passaporte internacional para a sustentabilidade industrial. Auxilia as empresas no desenvolvimento de práticas verdes, controle no descarte de resíduos, consumo hídrico eficiente e conformidade com legislações federais e estaduais.",
       points: [
@@ -262,8 +265,21 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: "Diferencial de Mercado Sustentável",
       quote: "Demonstre ao mundo que a sua empresa cresce respeitando o amanhã."
     },
+    fssc22000: {
+      title: "FSSC 22000",
+      subtitle: "reconhecimento da segurança na cadeia de suprimentos de alimentos",
+      description: "A FSSC 22000 é um esquema de certificação para segurança de alimento, alinhado com a abordagem do sistema de gestão ISO e com a estrutura harmonizada da ISO.",
+      points: [
+        "Reconhecimento internacional: Facilita a exportação e a aceitação como fornecedor por grandes marcas e redes de varejo.",
+        "Integração fácil: Como segue a estrutura de alto nível da ISO, pode ser facilmente combinada com outras certificações, como a ISO 9001 (Qualidade) e ISO 14001 (Meio Ambiente).",
+        "Prevenção de riscos: Minimiza perigos biológicos, químicos e físicos na produção, reduzindo custos com recalls e desperdícios.",
+        "Abrangência: Fabricação de alimentos e bebidas, Produção de embalagens para alimentos, Rações e nutrição animal, Armazenamento, transporte e logística, Serviços de alimentação (catering)"
+      ],
+      badge: "Segurança de Alimentos",
+      quote: "Evidencie a seus clientes e à sociedade que sua empresa produz, armazena ou transporta alimentos de forma totalmente segura."
+    },
     iso17025: {
-      title: "ISO/IEC 17025:2017",
+      title: "ISO/IEC 17025",
       subtitle: "Competência de Laboratórios",
       description: "Requisitos gerais para a competência, imparcialidade e operação consistente de laboratórios de ensaio e calibração. Essencial para demonstrar capacidade técnica e garantir que os resultados gerados sejam aceitos globalmente.",
       points: [
@@ -273,7 +289,20 @@ document.addEventListener('DOMContentLoaded', () => {
         "Aceitação internacional automática de laudos e certificados de teste."
       ],
       badge: "Acreditação e Confiança Metrológica",
-      quote: "Indispensável para laboratórios industriais e de calibração que prezam pelo rigor analítico."
+      quote: "Indispensável para laboratórios de ensaios e de calibração que prezam pelo rigor analítico."
+    },
+    bpf: {
+      title: "Boas Práticas de Fabricação (BPF / GMP)",
+      subtitle: "Garantia de Higiene e Qualidade",
+      description: "Conjunto de medidas fundamentais para indústrias farmacêuticas, de cosméticos, alimentos e dispositivos médicos. Garante que os produtos sejam fabricados de forma consistente e controlada, minimizando riscos de contaminação e falhas de processo.",
+      points: [
+        "Atendimento a exigências da ANVISA e órgãos reguladores nacionais e internacionais.",
+        "Padronização rigorosa de processos de higiene, calibração e sanitização.",
+        "Redução drástica de falhas operacionais e contaminações de lote.",
+        "Aumento da produtividade e segurança de toda a equipe industrial."
+      ],
+      badge: "Conformidade Regulatória Mandatória",
+      quote: "Fundamento essencial para garantir a segurança e a eficácia de cada produto."
     },
     iso45001: {
       title: "ISO 45001 / OHSAS 18001",
@@ -289,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
       quote: "Ambientes de trabalho seguros geram colaboradores engajados e resultados sólidos."
     },
     iso50001: {
-      title: "ISO 50001:2018",
+      title: "ISO 50001",
       subtitle: "Gestão de Energia",
       description: "Ferramenta estratégica para otimizar o consumo energético organizacional. Essencial para indústrias eletrointensivas e empresas engajadas na redução da pegada de carbono, reduzindo custos operacionais de forma imediata e gerando conformidade ESG.",
       points: [
@@ -321,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!data) return;
 
     const displayContainer = document.getElementById('standards-display-container');
-    
+
     // Add fade out animation class
     displayContainer.classList.add('opacity-0', 'translate-y-4');
 
@@ -338,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
       listEl.innerHTML = '';
       data.points.forEach(point => {
         const li = document.createElement('li');
-        li.className = 'flex items-start text-slate-700 dark:text-slate-300 font-medium';
+        li.className = 'flex items-start text-slate-300 font-medium';
         li.innerHTML = `
           <svg class="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -373,14 +402,54 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.getElementById('next-testimonial');
   let currentTestimonial = 0;
 
+  // --- Testimonials Truncation ("Ler mais") ---
+  const artvacLength = 485;
+  testimonials.forEach(slide => {
+    const textEl = slide.querySelector('p');
+    if (!textEl) return;
+    const originalText = textEl.textContent.trim();
+    if (originalText.length > artvacLength) {
+      // Find a clean word ending around the limit
+      let truncateIndex = originalText.indexOf(' ', artvacLength - 20);
+      if (truncateIndex === -1 || truncateIndex > artvacLength + 20) {
+        truncateIndex = artvacLength;
+      }
+      
+      const visibleText = originalText.substring(0, truncateIndex);
+      const hiddenText = originalText.substring(truncateIndex);
+      
+      // Update HTML structure
+      textEl.innerHTML = `
+        <span>${visibleText}</span><span class="hidden-text hidden">${hiddenText}</span>
+        <button class="read-more-btn text-brand-emerald font-bold hover:underline ml-1 focus:outline-none whitespace-nowrap text-sm">... ler mais</button>
+      `;
+      
+      const btn = textEl.querySelector('.read-more-btn');
+      const hiddenSpan = textEl.querySelector('.hidden-text');
+      
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = hiddenSpan.classList.contains('hidden');
+        if (isHidden) {
+          hiddenSpan.classList.remove('hidden');
+          btn.textContent = ' ler menos';
+        } else {
+          hiddenSpan.classList.add('hidden');
+          btn.textContent = '... ler mais';
+        }
+      });
+    }
+  });
+
+
   function showTestimonial(index) {
     testimonials.forEach((slide, i) => {
       slide.classList.add('hidden', 'opacity-0');
       slide.classList.remove('block', 'opacity-100');
     });
-    
+
     currentTestimonial = (index + testimonials.length) % testimonials.length;
-    
+
     testimonials[currentTestimonial].classList.remove('hidden');
     setTimeout(() => {
       testimonials[currentTestimonial].classList.add('block', 'opacity-100');
@@ -390,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (prevBtn && nextBtn && testimonials.length > 0) {
     prevBtn.addEventListener('click', () => showTestimonial(currentTestimonial - 1));
     nextBtn.addEventListener('click', () => showTestimonial(currentTestimonial + 1));
-    
+
     // Auto play every 6 seconds
     setInterval(() => {
       showTestimonial(currentTestimonial + 1);
@@ -407,7 +476,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     trigger.addEventListener('click', () => {
       const isOpen = !answer.classList.contains('hidden');
-      
+
       // Close all other FAQ answers first for safety
       faqItems.forEach(otherItem => {
         const otherAnswer = otherItem.querySelector('.faq-answer');
@@ -454,23 +523,36 @@ document.addEventListener('DOMContentLoaded', () => {
         method: "POST",
         body: formData
       })
-      .then(async (response) => {
-        let json = await response.json();
-        if (response.status === 200) {
-          // Reset form
-          contactForm.reset();
+        .then(async (response) => {
+          let json = await response.json();
+          if (response.status === 200) {
+            // Reset form
+            contactForm.reset();
 
-          // Show success toast
-          if (successModal) {
-            successModal.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
-            setTimeout(() => {
-              successModal.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
-            }, 4000);
+            // Show success toast
+            if (successModal) {
+              successModal.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+              setTimeout(() => {
+                successModal.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+              }, 4000);
+            }
+          } else {
+            console.warn("Web3Forms submission response status error (key may be missing): " + json.message);
+
+            // Fallback simulation for testing
+            contactForm.reset();
+            if (successModal) {
+              successModal.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+              setTimeout(() => {
+                successModal.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+              }, 4000);
+            }
           }
-        } else {
-          console.warn("Web3Forms submission response status error (key may be missing): " + json.message);
-          
-          // Fallback simulation for testing
+        })
+        .catch(error => {
+          console.error("Submission network error:", error);
+
+          // Fallback simulation for offline/testing environments
           contactForm.reset();
           if (successModal) {
             successModal.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
@@ -478,24 +560,11 @@ document.addEventListener('DOMContentLoaded', () => {
               successModal.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
             }, 4000);
           }
-        }
-      })
-      .catch(error => {
-        console.error("Submission network error:", error);
-        
-        // Fallback simulation for offline/testing environments
-        contactForm.reset();
-        if (successModal) {
-          successModal.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
-          setTimeout(() => {
-            successModal.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
-          }, 4000);
-        }
-      })
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      });
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        });
     });
   }
 
@@ -535,4 +604,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (currentYearEl) {
     currentYearEl.textContent = new Date().getFullYear();
   }
+
+  // --- Badge Anchors to Tab Switcher ---
+  document.querySelectorAll('.cert-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetTab = link.getAttribute('data-target-tab');
+      const targetButton = document.querySelector(`.tab-btn[data-tab="${targetTab}"]`);
+      if (targetButton) {
+        // Trigger click to change tab content
+        targetButton.click();
+      }
+    });
+  });
 });
