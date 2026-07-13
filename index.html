@@ -16,7 +16,7 @@
 
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Quality Consult: Há mais de 30 anos transformando empresas com soluções inovadoras de consultoria, treinamento corporativo e auditorias sob normas como ISO 9001, ISO 14001, FSSC 22000 e ISO/IEC 17025.">
+    content="Quality Consult: Há mais de 30 anos transformando empresas com consultoria, auditorias e treinamentos sob normas ISO 9001, 14001, FSSC 22000 e ISO/IEC 17025.">
   <meta name="keywords"
     content="consultoria empresarial, gestão de qualidade, ISO 9001, ISO 14001, FSSC 22000, ISO/IEC 17025, treinamento corporativo, auditoria interna">
   <meta name="author" content="Quality Consult">
@@ -124,39 +124,14 @@
   <link rel="shortcut icon" href="assets/img/logotransparente.png" type="image/x-icon">
 
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              navy: '#0f172a',
-              blue: '#1e3a8a',
-              emerald: '#10b981',
-              mint: '#34d399',
-              indigo: '#6366f1',
-              slate: '#1e293b'
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-
   <!-- AOS.js (Animate On Scroll) CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <!-- Custom Styles CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Compiled Custom & Tailwind Styles CSS -->
+  <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
-<body class="bg-gradient-light-mesh text-slate-800 dark:text-slate-200 min-h-screen relative">
+<body class="bg-gradient-light-mesh dark:bg-gradient-mesh text-slate-800 dark:text-slate-200 min-h-screen relative">
 
   <!-- ========================================== -->
   <!-- HEADER / NAVBAR                            -->
@@ -273,7 +248,7 @@
           <!-- Content -->
           <div class="lg:col-span-7 flex flex-col space-y-8" data-aos="fade-right">
             <div
-              class="inline-flex items-center space-x-2.5 px-4 py-2 bg-emerald-100 dark:bg-emerald-950/40 border border-brand-emerald/20 rounded-full w-fit">
+              class="inline-flex items-center space-x-2.5 px-4 py-2 bg-emerald-100  border border-brand-emerald/20 rounded-full w-fit">
               <span class="flex h-2 w-2 relative">
                 <span
                   class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-emerald opacity-75"></span>
@@ -283,13 +258,12 @@
                 inovação</span>
             </div>
 
-            <h1
-              class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-navy dark:text-white tracking-tight leading-tight">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-navy tracking-tight leading-tight">
               Credibilidade que consolida. <br>
               <span class="text-gradient-primary">Inovação que transforma.</span>
             </h1>
 
-            <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl font-medium leading-relaxed">
+            <p class="text-lg text-slate-600 max-w-2xl font-medium leading-relaxed">
               Impulsionamos negócios através de sistemas de gestão estruturados, capacitação corporativa de alto impacto
               e
               auditorias minuciosas sob as normas mundiais de excelência (ISO 9001, ISO 14001, FSSC 22000, ISO/IEC
@@ -316,7 +290,7 @@
               <a href="#normas"
                 class="text-xs font-semibold text-slate-400 hover:text-brand-emerald transition-colors uppercase tracking-widest">PRINCIPAIS
                 CERTIFICAÇÕES / ACREDITAÇÕES:</a>
-              <div class="flex flex-wrap gap-4 text-xs font-bold text-slate-500 dark:text-slate-400">
+              <div class="flex flex-wrap gap-4 text-xs font-bold text-slate-500">
                 <a href="#normas" data-target-tab="iso9001"
                   class="cert-link px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-lg hover:text-brand-emerald hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">ISO
                   9001</a>
@@ -435,11 +409,11 @@
         <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24 flex flex-col space-y-4" data-aos="fade-up">
           <span class="text-sm font-bold text-brand-emerald uppercase tracking-widest">Nossas Verticais de
             Soluções</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy dark:text-white tracking-tight">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">
             Soluções Estruturadas para Transformar seu Negócio
           </h2>
           <div class="w-16 h-1 bg-gradient-to-r from-brand-blue to-brand-emerald mx-auto rounded-full mt-2"></div>
-          <p class="text-slate-600 dark:text-slate-300 font-medium">
+          <p class="text-slate-600 font-medium">
             Combinamos expertise regulatória, metodologias modernas de capacitação e olhar minucioso em consultoria,
             treinamento e auditoria para garantir conformidade e inovação contínua.
           </p>
@@ -467,9 +441,9 @@
             </div>
 
             <h3 class="text-xl font-bold text-brand-navy dark:text-white mb-4">Consultoria e Gestão</h3>
-            <p class="text-slate-600 dark:text-slate-300 mb-8 font-medium leading-relaxed flex-grow">
-              Modelagem estratégica e preparação completa para certificações normativas nacionais e globais. Otimizamos
-              seus fluxos de valor.
+            <p class="text-slate-600 mb-8 font-medium leading-relaxed flex-grow">
+              Oferecemos consultoria para certificação ISO 9001 em São Paulo e região. Modelagem estratégica e
+              preparação completa para certificações normativas nacionais e globais. Otimizamos seus fluxos de valor.
             </p>
 
             <button data-service-trigger="consulting"
@@ -501,9 +475,9 @@
             </div>
 
             <h3 class="text-xl font-bold text-brand-navy dark:text-white mb-4">Treinamento e Capacitação</h3>
-            <p class="text-slate-600 dark:text-slate-300 mb-8 font-medium leading-relaxed flex-grow">
-              Programas in-company e abertos para formação de auditores e difusão de metodologias ágeis da qualidade nas
-              organizações.
+            <p class="text-slate-600 mb-8 font-medium leading-relaxed flex-grow">
+              Oferecemos treinamento in-company de ferramentas da qualidade, formação de auditores internos e difusão de
+              metodologias ágeis da qualidade nas organizações.
             </p>
 
             <button data-service-trigger="training"
@@ -535,9 +509,9 @@
             </div>
 
             <h3 class="text-xl font-bold text-brand-navy dark:text-white mb-4">Auditorias e Avaliações</h3>
-            <p class="text-slate-600 dark:text-slate-300 mb-8 font-medium leading-relaxed flex-grow">
-              Diagnósticos e auditorias internas com metodologia construtiva. Avaliamos a cadeia de suprimentos e
-              identificamos vulnerabilidades.
+            <p class="text-slate-600 mb-8 font-medium leading-relaxed flex-grow">
+              Saiba como preparar a empresa para auditoria FSSC 22000, ISO 9001 e ISO 14001. Realizamos diagnósticos de
+              gap analysis e auditorias internas com metodologia construtiva.
             </p>
 
             <button data-service-trigger="audits"
@@ -636,7 +610,7 @@
                 <div class="h-[1px] w-full bg-white/10"></div>
 
                 <!-- Main description -->
-                <p id="std-description" class="text-slate-300 font-medium leading-relaxed">
+                <p id="std-description" class="font-medium leading-relaxed">
                   A principal referência mundial em gestão empresarial. Ideal para empresas de todos os portes que
                   buscam
                   padronizar processos, otimizar a eficiência operacional, reter clientes e estabelecer uma cultura
@@ -647,7 +621,7 @@
                 <div class="space-y-4">
                   <h4 class="text-sm font-extrabold text-white uppercase tracking-wider">Principais Benefícios:</h4>
                   <ul id="std-points" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <li class="flex items-start text-slate-300 font-medium">
+                    <li class="flex items-start font-medium">
                       <svg class="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
                         stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -655,7 +629,7 @@
                       </svg>
                       Foco total na satisfação e fidelização dos clientes.
                     </li>
-                    <li class="flex items-start text-slate-300 font-medium">
+                    <li class="flex items-start font-medium">
                       <svg class="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
                         stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -663,7 +637,7 @@
                       </svg>
                       Mapeamento detalhado e sistematização de processos cruciais.
                     </li>
-                    <li class="flex items-start text-slate-300 font-medium">
+                    <li class="flex items-start font-medium">
                       <svg class="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
                         stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -671,7 +645,7 @@
                       </svg>
                       Tomada de decisões estratégicas fundamentadas em dados reais.
                     </li>
-                    <li class="flex items-start text-slate-300 font-medium">
+                    <li class="flex items-start font-medium">
                       <svg class="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
                         stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -684,15 +658,17 @@
 
                 <!-- Quote block from Consulting Partner -->
                 <div class="p-5 bg-white/5 rounded-2xl border border-white/5 flex items-center space-x-4">
-                  <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-brand-emerald border border-brand-emerald/20 flex items-center justify-center text-xl flex-shrink-0">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-emerald-500/10 text-brand-emerald border border-brand-emerald/20 flex items-center justify-center text-xl flex-shrink-0">
                     💡
                   </div>
                   <div>
-                    <p id="std-quote" class="text-xs md:text-sm italic text-slate-300 font-medium">
+                    <p id="std-quote" class="text-xs md:text-sm italic font-medium">
                       "Ideal para estruturar o crescimento acelerado com sustentabilidade e governança."
                     </p>
                     <span
-                      class="text-[10px] font-extrabold tracking-widest text-brand-emerald uppercase block mt-2">Dica da Quality</span>
+                      class="text-[10px] font-extrabold tracking-widest text-brand-emerald uppercase block mt-2">Dica da
+                      Quality</span>
                   </div>
                 </div>
               </div>
@@ -714,14 +690,16 @@
           <!-- Copy -->
           <div class="lg:col-span-7 flex flex-col space-y-6" data-aos="fade-right">
             <span class="text-sm font-bold text-brand-emerald uppercase tracking-widest">Nossa Jornada</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy dark:text-white tracking-tight">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">
               Mais de 30 anos Cultivando Relações de Sucesso e Confiança
             </h2>
             <div class="w-16 h-1 bg-gradient-to-r from-brand-blue to-brand-emerald rounded-full"></div>
-            <p class="text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+            <p class="text-slate-600 font-medium leading-relaxed">
               Nascemos com o propósito de descomplicar os sistemas de gestão empresarial. Acreditamos que a
               credibilidade
-              técnica não precisa ser fria; pelo contrário, nosso diferencial é a **simpatia e proximidade** de nossa
+              técnica não precisa ser fria; pelo contrário, nosso diferencial é a <span class="font-bold">Simpatia e
+                Proximidade</span> de
+              nossa
               equipe. Atuamos como parceiros de jornada, impulsionando a inovação em processos industriais e de
               serviços.
             </p>
@@ -732,7 +710,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </span>
-                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Auditorias Humanizadas</span>
+                <span class="text-sm font-bold text-slate-700">Auditorias Humanizadas</span>
               </div>
               <div class="flex items-center space-x-3.5">
                 <span class="p-2 bg-emerald-500/10 text-brand-emerald rounded-lg flex-shrink-0">
@@ -740,7 +718,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </span>
-                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Orientação pautada em
+                <span class="text-sm font-bold text-slate-700">Orientação pautada em
                   Resultados</span>
               </div>
             </div>
@@ -757,7 +735,7 @@
               <div class="flex flex-col space-y-6">
                 <span class="text-4xl">🌱</span>
                 <h3 class="text-2xl font-bold tracking-tight">Abordagem Amigável e Resultados Precisos</h3>
-                <p class="text-slate-300 text-sm font-medium leading-relaxed">
+                <p class="text-sm font-medium leading-relaxed">
                   Desmistificamos as exigências regulatórias. Orientamos sua empresa com empatia, alinhando inovação
                   operacional aos rigorosos critérios das Normas de Referências.
                 </p>
@@ -797,9 +775,9 @@
               <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-10">
                 <span
                   class="text-xs font-extrabold tracking-widest text-brand-emerald uppercase block mb-1">Fundação</span>
-                <span class="text-2xl font-extrabold text-brand-navy dark:text-white block mb-3">1993 - O Início do
+                <span class="text-2xl font-extrabold text-brand-navy block mb-3">1993 - O Início do
                   Propósito</span>
-                <p class="text-slate-600 dark:text-slate-400 font-medium text-sm leading-relaxed">
+                <p class="text-slate-600  font-medium text-sm leading-relaxed">
                   Com base em sua experiência na área da Qualidade nos segmentos automobilístico, metalúrgico, petróleo,
                   petroquímica e nuclear, o Engo. Mário Zardi Manzoli decide criar a Quality Consult. A filosofia de
                   consultoria e auditoria humanizadas, com foco no cliente, começa aqui.
@@ -824,9 +802,9 @@
               <div class="w-full md:w-[45%] pl-10 md:pl-10">
                 <span class="text-xs font-extrabold tracking-widest text-brand-blue uppercase block mb-1">Expansão e
                   Especialização Inicial</span>
-                <span class="text-2xl font-extrabold text-brand-navy dark:text-white block mb-3">2004 - Gestão
+                <span class="text-2xl font-extrabold text-brand-navy block mb-3">2004 - Gestão
                   Ambiental</span>
-                <p class="text-slate-600 dark:text-slate-400 font-medium text-sm leading-relaxed">
+                <p class="text-slate-600 font-medium text-sm leading-relaxed">
                   Início das atividades em sistemas de gestão ambiental, visando contribuir para um planeta sustentável.
                 </p>
               </div>
@@ -843,9 +821,9 @@
               <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-10">
                 <span class="text-xs font-extrabold tracking-widest text-brand-emerald uppercase block mb-1">Segunda
                   Expansão</span>
-                <span class="text-2xl font-extrabold text-brand-navy dark:text-white block mb-3">2009 - Cadeia
+                <span class="text-2xl font-extrabold text-brand-navy block mb-3">2009 - Cadeia
                   Automotiva</span>
-                <p class="text-slate-600 dark:text-slate-400 font-medium text-sm leading-relaxed">
+                <p class="text-slate-600 font-medium text-sm leading-relaxed">
                   A fim de atender a uma demanda de seus clientes e também do mercado, início das atividades na cadeia
                   automotiva, com foco na especificação ISO/TS 16949, requisitos específicos de montadoras e de
                   sistemistas.
@@ -870,9 +848,9 @@
               <div class="w-full md:w-[45%] pl-10 md:pl-10">
                 <span class="text-xs font-extrabold tracking-widest text-brand-blue uppercase block mb-1">Segunda
                   Expansão</span>
-                <span class="text-2xl font-extrabold text-brand-navy dark:text-white block mb-3">2011 - Competência de
+                <span class="text-2xl font-extrabold text-brand-navy block mb-3">2011 - Competência de
                   Laboratórios</span>
-                <p class="text-slate-600 dark:text-slate-400 font-medium text-sm leading-relaxed">
+                <p class="text-slate-600 font-medium text-sm leading-relaxed">
                   Capacitação da equipe com foco em laboratórios (ISO/IEC 17025), a fim de atender aos requisitos do
                   INMETRO/CGCRE para competência de laboratórios.
                 </p>
@@ -890,9 +868,9 @@
               <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-10">
                 <span class="text-xs font-extrabold tracking-widest text-brand-emerald uppercase block mb-1">Terceira
                   Expansão</span>
-                <span class="text-2xl font-extrabold text-brand-navy dark:text-white block mb-3">2015 - Segurança
+                <span class="text-2xl font-extrabold text-brand-navy block mb-3">2015 - Segurança
                   Alimentar</span>
-                <p class="text-slate-600 dark:text-slate-400 font-medium text-sm leading-relaxed">
+                <p class="text-slate-600  font-medium text-sm leading-relaxed">
                   Atuação em segurança e qualidade de alimentos (Food e Feed), área que demandava por profissionais
                   experientes e capacitados.
                 </p>
@@ -916,9 +894,9 @@
               <div class="w-full md:w-[45%] pl-10 md:pl-10">
                 <span class="text-xs font-extrabold tracking-widest text-brand-blue uppercase block mb-1">Inovação
                   Tecnológica</span>
-                <span class="text-2xl font-extrabold text-brand-navy dark:text-white block mb-3">2019 - Metodologia
+                <span class="text-2xl font-extrabold text-brand-navy block mb-3">2019 - Metodologia
                   SGI</span>
-                <p class="text-slate-600 dark:text-slate-400 font-medium text-sm leading-relaxed">
+                <p class="text-slate-600 font-medium text-sm leading-relaxed">
                   Modernização de nossa metodologia de implantação de sistemas de gestão integrados (SGI), aumentando a
                   eficiência dos processos de seus clientes, num prazo de implantação mais reduzido.
                 </p>
@@ -935,9 +913,9 @@
               <!-- Left Side Box -->
               <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-10">
                 <span class="text-xs font-extrabold tracking-widest text-brand-emerald uppercase block mb-1">Hoje</span>
-                <span class="text-2xl font-extrabold text-brand-navy dark:text-white block mb-3">2026 - Referência
+                <span class="text-2xl font-extrabold text-brand-navy block mb-3">2026 - Referência
                   Nacional</span>
-                <p class="text-slate-600 dark:text-slate-400 font-medium text-sm leading-relaxed">
+                <p class="text-slate-600 font-medium text-sm leading-relaxed">
                   Consolidação como uma empresa de consultoria dinâmica e amigável, com mais de 30 anos de atuação,
                   utilizando metodologias ágeis que permitem forte engajamento.
                 </p>
@@ -963,7 +941,7 @@
         <!-- Section Intro -->
         <div class="text-center flex flex-col space-y-4 mb-16" data-aos="fade-up">
           <span class="text-sm font-bold text-brand-emerald uppercase tracking-widest">Depoimentos 2026 recebidos</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy dark:text-white tracking-tight">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
             Quality Consult: Parceria, Confiança e Crescimento.
           </h2>
           <div class="w-16 h-1 bg-brand-emerald mx-auto rounded-full mt-2"></div>
@@ -1583,7 +1561,7 @@
         <!-- Section Header -->
         <div class="text-center flex flex-col space-y-4 mb-16" data-aos="fade-up">
           <span class="text-sm font-bold text-brand-emerald uppercase tracking-widest">Esclareça suas Dúvidas</span>
-          <h2 class="text-3xl font-extrabold text-brand-navy dark:text-white tracking-tight">
+          <h2 class="text-3xl font-extrabold text-brand-navy tracking-tight">
             Perguntas Frequentes
           </h2>
           <div class="w-16 h-1 bg-brand-emerald mx-auto rounded-full mt-2"></div>
@@ -1908,7 +1886,8 @@
     class="fixed bottom-24 right-6 z-40 flex flex-col space-y-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 rounded-2xl shadow-2xl max-w-xs transition-all duration-300 transform translate-y-4 opacity-0 pointer-events-none">
     <div class="flex items-start justify-between">
       <div class="flex items-center space-x-3">
-        <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/40 border border-brand-emerald/20 flex items-center justify-center text-lg flex-shrink-0">
+        <div
+          class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/40 border border-brand-emerald/20 flex items-center justify-center text-lg flex-shrink-0">
           💡
         </div>
         <div>
@@ -1983,7 +1962,7 @@
         <div class="h-[1px] w-full bg-slate-200 dark:bg-slate-800"></div>
 
         <!-- Description -->
-        <p id="modal-description" class="text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+        <p id="modal-description" class="text-slate-600 font-medium leading-relaxed">
           Descrição detalhada do serviço...
         </p>
 
@@ -2023,7 +2002,7 @@
       </div>
       <div>
         <h5 class="text-sm font-extrabold text-slate-800 dark:text-white">Mensagem Enviada!</h5>
-        <p class="text-xs text-slate-600 dark:text-slate-400 font-semibold mt-0.5">Em breve um consultor entrará em
+        <p class="text-xs text-slate-600 font-semibold mt-0.5">Em breve um consultor entrará em
           contato.</p>
       </div>
     </div>

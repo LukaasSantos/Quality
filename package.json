@@ -1,0 +1,19 @@
+{
+  "name": "quality-consult",
+  "version": "1.0.0",
+  "description": "Quality Consult website",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./styles.css -o ./assets/css/styles.min.css --minify",
+    "watch": "npx tailwindcss -i ./styles.css -o ./assets/css/styles.min.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.2",
+    "autoprefixer": "^10.5.2",
+    "postcss": "^8.5.19",
+    "tailwindcss": "^4.3.2"
+  }
+}
