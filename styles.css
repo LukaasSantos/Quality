@@ -42,10 +42,10 @@ body {
 
 /* Glassmorphism Classes */
 .glass-nav {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .glass-card {
@@ -159,7 +159,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #10b981 !important; /* Brand Emerald */
+  color: #3b82f6 !important;
 }
 
 .nav-link::after {
@@ -169,7 +169,7 @@ body {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #10b981;
+  background-color: #3b82f6;
   transition: width 0.3s ease;
 }
 
@@ -178,13 +178,13 @@ body {
   width: 100%;
 }
 
-/* Scrolled Header Menu Font Color turns White */
+/* Scrolled Header Menu Font Color turns Brand Navy */
 #main-header.glass-nav .nav-link:not(.active) {
-  color: #ffffff !important;
+  color: #0f172a !important;
 }
 
 #main-header.glass-nav .nav-link:not(.active):hover {
-  color: #10b981 !important;
+  color: #3b82f6 !important;
 }
 
 /* Active tab style for standard selector */
